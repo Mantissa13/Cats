@@ -42,7 +42,7 @@ header {
 	justify-content: flex-end;
 	align-items: flex-start;
 	box-shadow: 5px 5px 7px 2px #7f6e3075;
-	height: 190px;
+	height: 210px;
 	padding: 15px;
 	text-align: center;
 	position: relative;
@@ -92,7 +92,7 @@ header {
 	background-color: #85661a80;
 }
 
-.fa-pen, .fa-trash {
+.fa-pen {
 	border: none;
 	outline: none;
 	padding: 6px 10px;
@@ -113,8 +113,14 @@ header {
 
 .card__trash {
 	position: absolute;
-	right: 8px;
-	bottom: 8px;
+	right: 10px;
+	border: none;
+	outline: none;
+	padding: 6px 10px;
+	border-radius: 8px;
+	cursor: pointer;
+	color: #fff;
+	background-color: #85661a80;
 }
 
 .card__trash:hover {
@@ -194,7 +200,6 @@ input, textarea {
 }
 
 nav {
-	position: fixed;
 	box-sizing: border-box;
 	height: 100%;
 	right: 0;

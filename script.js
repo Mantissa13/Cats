@@ -24,6 +24,19 @@ function createCard (cat, el = box) {
 					},
 					body: JSON.stringify({favorite: !cat.favorite})
 				})
+				.then(res => {
+					if (res.status === 200) {
+						like.classList.toggle("fa-solid");
+						like.classList.toggle("fa-regular");
+						cats = cats.map(c => {
+								if (c.id === cat.id) {
+									c.favorite = !cat.favorite;
+								}
+								return c;
+						})
+						localStorage.setItem("cats-data", JSON.stringify(cats))
+					}
+				})
 				}
 			})
 
@@ -55,6 +68,8 @@ function deleteCard(id, el) {
 			// console.log(res.status);
 			if (res.status === 200) {
 				el.remove();
+				cats = cats.filter(c => c.id !== id)
+				localStorage.setItem("cats-data", JSON.stringify(cats))
 			}
 		})
 	}
