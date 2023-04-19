@@ -119,6 +119,31 @@ function addCat(cat) {
 			})
 }
 
+function showCat (cat, el = infoBlock) {
+
+	const catName = document.createElement("div");
+	catName.className = "cat__name";
+	const catText = document.createElement("div");
+	catText.className = "cat__description";
+	const trash = document.createElement("i");
+	trash.className = "fa-solid fa-trash card__trash";
+	trash.addEventListener("click", e => {
+			deleteCard(cat.id, card)
+	})
+
+	infoBlock.append(catName, catAge, catText, trash);
+	if (cat.catAge >= 0) {
+		const catAge = document.createElement("div");
+		catAge.innerText = cat.catAge;
+		catAge.className = "cat__age";
+		infoBlock.append(catAge);
+		}
+	// card.addEventListener("click", (e) => {
+	// 	deleteCard(cat.id, card)
+	// });
+	el.append(showCat);
+}
+
 
 
 

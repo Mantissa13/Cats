@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 h3 {
@@ -74,14 +74,14 @@ header {
 
 }
 
-.cat-info {
+.cats-info {
   display: flex;
 	justify-content: space-evenly;
   align-items: center;
 	font-size: 1rem;
 }
 
-.btn-text {
+.btn__info {
 	border: none;
 	outline: none;
 	padding: 6px 12px;
@@ -147,7 +147,7 @@ header {
 	content: "...";
 }
 
-.modal-container {
+.modal__container {
 	position: fixed;
 	background-color: #0008;
 	backdrop-filter: blur(2px);
@@ -155,7 +155,6 @@ header {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	display: none;
@@ -227,4 +226,70 @@ footer {
 
 .footer__copyright {
 	padding: 10px;
+}
+
+.info__block {
+	position: fixed;
+	background-color: #0008;
+	backdrop-filter: blur(2px);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.close__cat {
+	position: absolute;
+	right: 100px;
+	top: 245px;
+	font-size: 1.4rem;
+	cursor: pointer;
+}
+
+.close__cat:hover {
+	color: coral;
+	}
+
+#show {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 50px;
+	justify-items: center;
+	background-color: bisque;
+	padding: 30px;
+	border-radius: 8px;
+	max-width: 1000px;
+	position: relative;
+}
+
+.about {
+	display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.cat__name {
+	font-weight: 700;
+	font-size: 3rem;
+	margin: 30px 0;
+}
+
+.cat__age {
+	margin-bottom: 30px;	
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.cat__description {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+.cat-info {
+position: absolute;
+top: 0;
+right: 0;
 }

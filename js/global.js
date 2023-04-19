@@ -1,7 +1,12 @@
 const box = document.querySelector(".container");
 const addBtn = document.querySelector(".add-btn");
-const mdBox = document.querySelector(".modal-container");
+const mdBox = document.querySelector(".modal__container");
 const mdClose = mdBox.querySelector(".modal-close");
+
+const btnInfo = document.querySelector(".btn__info");
+const closeCat = document.querySelector(".close__cat");
+const infoBlock = document.querySelector(".info__block");
+
 const addForm = document.forms.add;
 
 let user = localStorage.getItem("cat13");

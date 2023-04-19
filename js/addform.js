@@ -36,6 +36,7 @@ addForm.addEventListener("submit", e => {
 			createCard(body);
 			cats.push(body);
 			localStorage.setItem("cats-data", JSON.stringify(cats))
+
 		} else {
 			return res.json();
 		}
@@ -46,3 +47,14 @@ addForm.addEventListener("submit", e => {
 		}
 	});
 });
+
+btnInfo.addEventListener("click", e => {
+	infoBlock.style.display = "flex";
+})
+closeCat.addEventListener("click", e => {
+	infoBlock.style = null;
+})
+
+// infoBlock.addEventListener("submit", e => {
+
+// });
